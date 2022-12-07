@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <translate
+        android:fromXDelta="0%p"
+        android:toXDelta="30%p"
+        android:duration="3000"
+        android:repeatCount="1"
+        android:fillAfter="true"
+        />
+<!--  fillAfter="true"    이동 이후 원위치로 돌아오는거 막음
+      repeatCoutn="-1"  이면 무한 반복 -->
+</set>
