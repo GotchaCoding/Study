@@ -59,6 +59,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button button4_1 = findViewById(R.id.recyclerview_layout);
+        button4_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, SamplerecyclerViewActivity.class);
+                startActivity(i);
+            }
+        });
 
         Button button5 = findViewById(R.id.tweenAnimation);
         button5.setOnClickListener(new View.OnClickListener() {
