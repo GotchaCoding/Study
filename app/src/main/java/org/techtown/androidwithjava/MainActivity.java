@@ -114,6 +114,33 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        Button button10 = findViewById(R.id.threadActivity);
+        button10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, ThreadActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+        Button button11 = findViewById(R.id.threadActivity2);
+        button11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent ( MainActivity.this, ThreadActivity2.class);
+                startActivity(i);
+            }
+        });
+
+        Button button12 = findViewById(R.id.threadActivity3);
+        button12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent ( MainActivity.this, ThreadActivity3.class);
+                startActivity(i);
+            }
+        });
 
     }
 }

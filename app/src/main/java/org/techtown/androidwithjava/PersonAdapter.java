@@ -1,6 +1,7 @@
 package org.techtown.androidwithjava;
 
 import android.app.Person;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -77,6 +78,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
      */
     public void addItem(PersonActivity item){
         itemslist.add(item);
+        Log.e("log" , "addItem");
     }
 
     public void setItemslist(ArrayList<PersonActivity> itemslist){            //  매개변수 어레이리스트를 전역변수 어레이리스트와 동일하게 만들어줌
