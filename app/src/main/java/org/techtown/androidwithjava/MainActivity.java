@@ -8,6 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import org.techtown.androidwithjava.http.HttpActivity;
+import org.techtown.androidwithjava.movie.SampleMovieActivity;
+import org.techtown.androidwithjava.socket.SocketActivity;
+import org.techtown.androidwithjava.volley.JsonActivity;
+import org.techtown.androidwithjava.volley.VolleyActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     Button button;
@@ -138,6 +144,52 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent ( MainActivity.this, ThreadActivity3.class);
+                startActivity(i);
+            }
+        });
+
+        Button button13 = findViewById(R.id.socketActivity);
+        button13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, SocketActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+        Button button14 = findViewById(R.id.httpActivity);
+        button14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this , HttpActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button button15 = findViewById(R.id.VolleyActivity);
+        button15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this , VolleyActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button button16 = findViewById(R.id.jsonActivity);
+        button16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this , JsonActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button button17 = findViewById(R.id.sampleMovieActivity);
+        button17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this , SampleMovieActivity.class);
                 startActivity(i);
             }
         });

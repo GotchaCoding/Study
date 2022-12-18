@@ -149,5 +149,56 @@
 
         app:layout_constraintTop_toBottomOf="@+id/keypadActivity" />
 
+    <Button
+        android:id="@+id/socketActivity"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+
+        android:layout_marginTop="10dp"
+        android:text="쏘켓"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/threadActivity2" />
+
+    <Button
+        android:id="@+id/httpActivity"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:text="http"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/threadActivity3" />
+
+    <Button
+        android:id="@+id/VolleyActivity"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Volley"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/socketActivity" />
+
+
+    <Button
+        android:id="@+id/jsonActivity"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:text="JSON"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/httpActivity" />
+
+    <Button
+        android:id="@+id/sampleMovieActivity"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Movie"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VolleyActivity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
