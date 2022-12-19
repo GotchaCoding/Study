@@ -53,32 +53,32 @@ public class JsonActivity extends AppCompatActivity {
     public void makeRequest() {
         String url = editText.getText().toString();
 
-        StringRequest request = new StringRequest(
+        StringRequest request = new StringRequest(        //StringRequest 객체??  메서드??
                 Request.Method.GET,url, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        println("응답 -> " + response);
+                        println("응답 -> " + response);   // 2 번째로 실행됨
 
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        println("에러 -> " + error.getMessage());
+                        println("에러 -> " + error.getMessage());   //java.lang.RuntimeException: Bad URL
                     }
                 }
         ) {
             @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
+            protected Map<String, String> getParams() throws AuthFailureError {  //Map은 인터페이스..  그리고 메서드자리인가?
                 Map<String,String> params = new HashMap<String,String>();
 
                 return params;
             }
         };
 
-        request.setShouldCache(false);
+        request.setShouldCache(false);    //request 객체만든거 여기서 사용 .
         requestQueue.add(request);
-        println("요청 보냄.");
+        println("요청 보냄.");   //  1. 이게먼저 뜸
     }
 
     public void println(String data) {

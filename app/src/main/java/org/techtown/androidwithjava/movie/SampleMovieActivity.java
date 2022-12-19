@@ -51,7 +51,7 @@ public class SampleMovieActivity extends AppCompatActivity {
             }
         });
 
-        if (requestQueue == null) {
+        if (requestQueue == null) {    // 리퀘스트 객체가 널값이면  객체를 만듬.
             requestQueue = Volley.newRequestQueue(getApplicationContext());
         }
 
@@ -67,9 +67,9 @@ public class SampleMovieActivity extends AppCompatActivity {
 
 
     public void makeRequest() {
-        String url = editText.getText().toString();
+        String url = editText.getText().toString();    //에딧텍스트에 적힌값 스트링 변수에 저장
 
-        StringRequest request = new StringRequest(
+        StringRequest request = new StringRequest(    //이건 객체인지 ..?   매개변수안에 메서드처럼 많은 코드 적혀있고,   매개변수 이후 { } ;  형식의 함수가 또나옴.
                 Request.Method.GET,
                 url,
                 new Response.Listener<String>() {      //ㅇㅔ러 부분
@@ -77,7 +77,7 @@ public class SampleMovieActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         println("응답 -> " + response);
 
-                        processResponse(response);    //에러 부분
+                        processResponse(response);    //에러 부분     ,추가된 메서드
                     }
                 },
                 new Response.ErrorListener() {
@@ -105,15 +105,16 @@ public class SampleMovieActivity extends AppCompatActivity {
     }
 
     public void processResponse(String response) {
-        Gson gson = new Gson();
-        MovieList2 movieList = gson.fromJson(response, MovieList2.class);   //에러부분
+        Gson gson = new Gson();  //JSON 문자열을 자바 객체로 봐꾸어줌    volley는 웹으로 요청하고 응답받음.
+        MovieList2 movieList = gson.fromJson(response, MovieList2.class);   //에러부    어레이리스트에 JSON으로 받은 정보 입력?
 
         println("영화정보의 수 : " + movieList.boxOfficeResult.dailyBoxOfficeList.size());
 
         for (int i = 0; i < movieList.boxOfficeResult.dailyBoxOfficeList.size(); i++) {
-            Movie2 movie = movieList.boxOfficeResult.dailyBoxOfficeList.get(i);
+            Movie2 movie = movieList.boxOfficeResult.dailyBoxOfficeList.get(i);  // Movie2 겍체만들고 거기에 MovieList2 객체의 Movie2와 연결된 어레이 리스트를 대입.
+            //movie 에는 JSON 으로  서버에서 받은 데이터가 들어아게됨..?
 
-            adapter.addItem(movie);
+            adapter.addItem(movie);   //어레이리스트에 데이터 추가.
         }
 
         adapter.notifyDataSetChanged();   //에러부분 java.lang.IllegalArgumentException
