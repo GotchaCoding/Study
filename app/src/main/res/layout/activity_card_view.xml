@@ -5,19 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CardViewActivity">
+    tools:context=".ch07_widget.CardViewActivity">
 
-    <org.techtown.androidwithjava.CardViewlayout01
+    <org.techtown.androidwithjava.ch07_widget.CardViewlayout
         android:id="@+id/cardviewlayout01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
 </LinearLayout>

@@ -17,119 +17,119 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".movie.SampleMovieActivity"
+            android:name=".ch10_server.http.movie.SampleMovieActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="org.techtown.androidwithjava.volley.JsonActivity"
+            android:name="org.techtown.androidwithjava.ch10_server.http.volley.JsonActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="org.techtown.androidwithjava.volley.VolleyActivity"
+            android:name="org.techtown.androidwithjava.ch10_server.http.volley.VolleyActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="org.techtown.androidwithjava.http.HttpActivity"
+            android:name="org.techtown.androidwithjava.ch10_server.http.http.HttpActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="org.techtown.androidwithjava.socket.SocketActivity"
+            android:name="org.techtown.androidwithjava.ch10_server.http.socket.SocketActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ThreadActivity3"
+            android:name=".ch09_thread.ThreadActivity3"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ThreadActivity2"
+            android:name=".ch09_thread.ThreadActivity2"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ThreadActivity"
+            android:name=".ch09_thread.ThreadActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".KeypadActivity"
+            android:name=".ch08_animation.KeypadActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SeekBarActivity"
+            android:name=".ch08_animation.SeekBarActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".WebViewActivity"
+            android:name=".ch08_animation.WebViewActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".TweenAnimationActivity"
+            android:name=".ch08_animation.TweenAnimationActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SamplerecyclerViewActivity"
+            android:name=".ch07_widget.SamplerecyclerViewActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".CardViewActivity"
+            android:name=".ch07_widget.CardViewActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SampleViewActivity"
+            android:name=".ch07_widget.SampleViewActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".PagingSlideActivity3"
+            android:name=".ch08_animation.PagingSlideActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".NinePatch07Activity"
+            android:name=".ch07_widget.NinePatchActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -144,7 +144,7 @@
         <!-- </intent-filter> -->
         <!-- </receiver> -->
         <activity
-            android:name=".ServieAndBrodcastReceiver"
+            android:name=".ch06_service.ServieAndBrodcastReceiverActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -152,7 +152,7 @@
         </activity>
 
         <service
-            android:name=".MyService"
+            android:name=".ch06_service.MyService"
             android:enabled="true"
             android:exported="true" />
 

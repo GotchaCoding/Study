@@ -8,11 +8,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import org.techtown.androidwithjava.http.HttpActivity;
-import org.techtown.androidwithjava.movie.SampleMovieActivity;
-import org.techtown.androidwithjava.socket.SocketActivity;
-import org.techtown.androidwithjava.volley.JsonActivity;
-import org.techtown.androidwithjava.volley.VolleyActivity;
+import org.techtown.androidwithjava.ch06_service.ServieAndBrodcastReceiverActivity;
+import org.techtown.androidwithjava.ch07_widget.CardViewActivity;
+import org.techtown.androidwithjava.ch07_widget.NinePatchActivity;
+import org.techtown.androidwithjava.ch07_widget.SampleViewActivity;
+import org.techtown.androidwithjava.ch07_widget.SamplerecyclerViewActivity;
+import org.techtown.androidwithjava.ch08_animation.KeypadActivity;
+import org.techtown.androidwithjava.ch08_animation.PagingSlideActivity;
+import org.techtown.androidwithjava.ch08_animation.SeekBarActivity;
+import org.techtown.androidwithjava.ch08_animation.TweenAnimationActivity;
+import org.techtown.androidwithjava.ch08_animation.WebViewActivity;
+import org.techtown.androidwithjava.ch09_thread.ThreadActivity;
+import org.techtown.androidwithjava.ch09_thread.ThreadActivity2;
+import org.techtown.androidwithjava.ch09_thread.ThreadActivity3;
+import org.techtown.androidwithjava.ch10_server.http.http.HttpActivity;
+import org.techtown.androidwithjava.ch10_server.http.movie.SampleMovieActivity;
+import org.techtown.androidwithjava.ch10_server.http.socket.SocketActivity;
+import org.techtown.androidwithjava.ch10_server.http.volley.JsonActivity;
+import org.techtown.androidwithjava.ch10_server.http.volley.VolleyActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this , ServieAndBrodcastReceiver.class);
+                Intent intent = new Intent(MainActivity.this , ServieAndBrodcastReceiverActivity.class);
                 startActivity(intent);
             }
         });
@@ -41,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this , NinePatch07Activity.class);
+                Intent i = new Intent(MainActivity.this , NinePatchActivity.class);
                 startActivity(i);
             }
         });
@@ -87,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, PagingSlideActivity3.class);
+                Intent i = new Intent(MainActivity.this, PagingSlideActivity.class);
                 startActivity(i);
             }
         });

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".volley.JsonActivity">
+    tools:context=".ch10_server.http.volley.JsonActivity">
 
     <EditText
         android:id="@+id/editText_json"
