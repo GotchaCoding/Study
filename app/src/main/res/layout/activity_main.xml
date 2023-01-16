@@ -201,4 +201,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/VolleyActivity" />
 
+    <Button
+        android:id="@+id/gridRecyclerViewActivity"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:text="Grid리사이클"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jsonActivity" />
+
+    <Button
+        android:id="@+id/databaseActivity"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:text="데이터베이스"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sampleMovieActivity" />
+
+    <Button
+        android:id="@+id/databaseActivity2"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:text="데이터베이스 핼"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridRecyclerViewActivity" />
+
+    <ImageView
+        android:id="@+id/nextPage"
+        android:layout_width="71dp"
+        android:layout_height="58dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/face1" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

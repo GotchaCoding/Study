@@ -27,7 +27,7 @@ public class MovieAdapter2 extends RecyclerView.Adapter<MovieAdapter2.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Movie2 item = items.get(position);
-        holder.setItem(item);   //널포인트
+        holder.setItem(item);
     }
 
     @Override
@@ -61,7 +61,7 @@ public class MovieAdapter2 extends RecyclerView.Adapter<MovieAdapter2.ViewHolder
 
         public void setItem(Movie2 item) {
             textView.setText(item.movieNm);
-            textView2.setText(item.audiCnt + " 명");   //널포인트
+            textView2.setText(item.audiCnt + " 명");
         }
     }
 
