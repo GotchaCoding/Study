@@ -57,7 +57,7 @@ public class DatabaseActivity2 extends AppCompatActivity {
         btn_dataRead.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                executeQuery();
+                executeQuery(tableName);
             }
         });
     }
@@ -108,10 +108,10 @@ public class DatabaseActivity2 extends AppCompatActivity {
         tv_scroll2.append(data + "\n");
     }
 
-    public void executeQuery() {
+    public void executeQuery(String tableName) {
         println("executeQuery 호출됨.");
 
-        Cursor cursor = database.rawQuery("select _id, name, age, mobile from emp", null);
+        Cursor cursor = database.rawQuery("select _id, name, age, mobile from "+ tableName, null);
         int recordCount = cursor.getCount();
         println("레코드 개수: " + recordCount);
 

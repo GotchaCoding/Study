@@ -9,7 +9,6 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
-
     <permission
         android:name="org.techtown.androidwithjava.ch11_database.contentProvider"
         android:protectionLevel="normal" />
@@ -28,6 +27,27 @@
         android:theme="@style/Theme.AndroidWithJava"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".ch12_viewgraphic.drawable.MyDrawableActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ch12_viewgraphic.CustomViewStyleActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ch12_viewgraphic.CustomViewActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".ch11_database.contacts.ContactsActivity"
             android:exported="false">

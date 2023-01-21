@@ -10,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import org.techtown.androidwithjava.ch11_database.album.AlbumActivity;
 import org.techtown.androidwithjava.ch11_database.contacts.ContactsActivity;
 import org.techtown.androidwithjava.ch11_database.contentProvider.ContentProviderActivity;
+import org.techtown.androidwithjava.ch12_viewgraphic.CustomViewActivity;
+import org.techtown.androidwithjava.ch12_viewgraphic.CustomViewStyleActivity;
+import org.techtown.androidwithjava.ch12_viewgraphic.drawable.MyDrawableActivity;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -41,6 +44,33 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SecondActivity.this, ContactsActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn_custom = findViewById(R.id.btn_customView);
+        btn_custom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SecondActivity.this, CustomViewActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn_customStyle = findViewById(R.id.btn_customStyle);
+        btn_customStyle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SecondActivity.this, CustomViewStyleActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn_drawable = findViewById(R.id.btn_mydrawable);
+        btn_drawable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SecondActivity.this, MyDrawableActivity.class);
                 startActivity(i);
             }
         });
