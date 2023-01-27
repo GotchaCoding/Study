@@ -1,6 +1,5 @@
 package org.techtown.androidwithjava.ch07_widget;
 
-import android.app.Person;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -76,7 +75,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
     /** 각각의 아이템을 위한 Person 객체를 어레이리스트 안에 넣어 관리하기 때문에 이 어뎁터를 사용하는 소스코드에서 어뎁터에 Person 객체를 넣거나 가져갈수 잇도록 만든 메서드.
      *
      *  Person가 매개변수로 들어간거 이해됨? --> Person를 객체로 썻다는거고..?   --> 객체가된 변수를  어레이리스트에 넣으면.. 더해진다??     Person에는 2가지 정보가 입력되어야 하는데
-     *
+     *0
      * @param item
      */
     public void addItem(Person1 item){

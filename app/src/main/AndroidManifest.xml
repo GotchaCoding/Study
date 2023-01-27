@@ -28,6 +28,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ch12_viewgraphic.multitouch.MultiTouchActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ch12_viewgraphic.paintboard.PaintBoardActivity"
             android:exported="false">
             <meta-data
