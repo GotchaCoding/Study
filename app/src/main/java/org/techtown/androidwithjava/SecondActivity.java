@@ -16,6 +16,7 @@ import org.techtown.androidwithjava.ch12_viewgraphic.bitmap.BitmapActivity;
 import org.techtown.androidwithjava.ch12_viewgraphic.drawable.MyDrawableActivity;
 import org.techtown.androidwithjava.ch12_viewgraphic.multitouch.MultiTouchActivity;
 import org.techtown.androidwithjava.ch12_viewgraphic.paintboard.PaintBoardActivity;
+import org.techtown.androidwithjava.ch13_multimedia.CaptureIntentActivity;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -101,6 +102,15 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SecondActivity.this, MultiTouchActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn_capture = findViewById(R.id.btn_capture);
+        btn_capture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SecondActivity.this, CaptureIntentActivity.class);
                 startActivity(i);
             }
         });
