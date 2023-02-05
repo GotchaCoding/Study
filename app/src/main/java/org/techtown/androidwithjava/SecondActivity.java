@@ -16,8 +16,11 @@ import org.techtown.androidwithjava.ch12_viewgraphic.bitmap.BitmapActivity;
 import org.techtown.androidwithjava.ch12_viewgraphic.drawable.MyDrawableActivity;
 import org.techtown.androidwithjava.ch12_viewgraphic.multitouch.MultiTouchActivity;
 import org.techtown.androidwithjava.ch12_viewgraphic.paintboard.PaintBoardActivity;
+import org.techtown.androidwithjava.ch13_multimedia.AudioPlayerActivity;
 import org.techtown.androidwithjava.ch13_multimedia.CaptureIntentActivity;
+import org.techtown.androidwithjava.ch13_multimedia.MediaRecorderActivity;
 import org.techtown.androidwithjava.ch13_multimedia.SurfaceCaptureActivity;
+import org.techtown.androidwithjava.ch13_multimedia.VideoPlayerActivity;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -124,5 +127,33 @@ public class SecondActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        Button btn_music = findViewById(R.id.btn_music);
+        btn_music.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SecondActivity.this, AudioPlayerActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn_media = findViewById(R.id.btn_media);
+        btn_media.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SecondActivity.this, VideoPlayerActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn_record = findViewById(R.id.btn_record);
+        btn_record.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SecondActivity.this, MediaRecorderActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
 }
