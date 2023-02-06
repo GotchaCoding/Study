@@ -21,6 +21,8 @@ import org.techtown.androidwithjava.ch13_multimedia.CaptureIntentActivity;
 import org.techtown.androidwithjava.ch13_multimedia.MediaRecorderActivity;
 import org.techtown.androidwithjava.ch13_multimedia.SurfaceCaptureActivity;
 import org.techtown.androidwithjava.ch13_multimedia.VideoPlayerActivity;
+import org.techtown.androidwithjava.ch13_multimedia.VideoRecodingActivity;
+import org.techtown.androidwithjava.ch13_multimedia.YoutubeActivity;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -151,6 +153,24 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SecondActivity.this, MediaRecorderActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn_videoRecord = findViewById(R.id.btn_videoRecord);
+        btn_videoRecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SecondActivity.this, VideoRecodingActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn_youtube = findViewById(R.id.btn_youtube);
+        btn_youtube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SecondActivity.this, YoutubeActivity.class);
                 startActivity(i);
             }
         });
