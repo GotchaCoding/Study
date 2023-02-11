@@ -23,6 +23,8 @@ import org.techtown.androidwithjava.ch13_multimedia.SurfaceCaptureActivity;
 import org.techtown.androidwithjava.ch13_multimedia.VideoPlayerActivity;
 import org.techtown.androidwithjava.ch13_multimedia.VideoRecodingActivity;
 import org.techtown.androidwithjava.ch13_multimedia.YoutubeActivity;
+import org.techtown.androidwithjava.ch14_gps.LocationActivity;
+import org.techtown.androidwithjava.ch14_gps.MapActivity;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -171,6 +173,24 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SecondActivity.this, YoutubeActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn_gps = findViewById(R.id.btn_gps);
+        btn_gps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SecondActivity.this, LocationActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn_map = findViewById(R.id.btn_map);
+        btn_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SecondActivity.this, MapActivity.class);
                 startActivity(i);
             }
         });
