@@ -25,6 +25,7 @@ import org.techtown.androidwithjava.ch13_multimedia.VideoRecodingActivity;
 import org.techtown.androidwithjava.ch13_multimedia.YoutubeActivity;
 import org.techtown.androidwithjava.ch14_gps.LocationActivity;
 import org.techtown.androidwithjava.ch14_gps.MapActivity;
+import org.techtown.androidwithjava.ch14_gps.widget.WidgetActivity;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -195,5 +196,13 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
+        Button btn_widget = findViewById(R.id.btn_widget);
+        btn_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SecondActivity.this, WidgetActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }

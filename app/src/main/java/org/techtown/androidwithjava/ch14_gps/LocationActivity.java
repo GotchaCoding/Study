@@ -54,7 +54,7 @@ public class LocationActivity extends AppCompatActivity {
         LocationManager manager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
         try {
-            Location location = manager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            Location location = manager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
             if (location != null) {
                 double latitude = location.getLatitude();
                 double longitude = location.getLongitude();
@@ -64,11 +64,11 @@ public class LocationActivity extends AppCompatActivity {
             }
 
             GPSListener gpsListener = new GPSListener();
-            long minTime = 5000;
+            long minTime = 2000;
             float minDistance = 0;
 
             manager.requestLocationUpdates(
-                    LocationManager.GPS_PROVIDER,
+                    LocationManager.NETWORK_PROVIDER,
                     minTime, minDistance, gpsListener);
 
             Toast.makeText(getApplicationContext(), "내 위치확인 요청함",

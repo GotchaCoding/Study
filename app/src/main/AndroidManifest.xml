@@ -41,8 +41,27 @@
         android:theme="@style/Theme.AndroidWithJava"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyA-gKIt6e_-tqes-lQcGMQvs9DiLGgLoYY"/>
-        
+        <receiver android:name=".ch14_gps.widget.MyLocationProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/mylocationinfo"/>
+        </receiver>
+        <service android:name=".ch14_gps.widget.MyLocationProvider$GPSLocationService"/>
+        <activity
+            android:name=".ch14_gps.widget.WidgetActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA-gKIt6e_-tqes-lQcGMQvs9DiLGgLoYY" />
+
         <activity
             android:name=".ch14_gps.MapActivity"
             android:exported="false">

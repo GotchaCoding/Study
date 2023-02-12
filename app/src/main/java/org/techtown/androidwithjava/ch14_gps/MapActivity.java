@@ -40,7 +40,7 @@ public class MapActivity extends AppCompatActivity {
         setContentView(R.layout.activity_map);
 
 
-        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);    //내 위치 오버레이
         mapFragment.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(GoogleMap googleMap) {
@@ -95,7 +95,7 @@ public class MapActivity extends AppCompatActivity {
         LocationManager manager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
         try {
-            Location location = manager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            Location location = manager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
             if (location != null) {
                 double latitude = location.getLatitude();
                 double longitude = location.getLongitude();
@@ -109,7 +109,7 @@ public class MapActivity extends AppCompatActivity {
             float minDistance = 0;
 
             manager.requestLocationUpdates(
-                    LocationManager.GPS_PROVIDER,
+                    LocationManager.NETWORK_PROVIDER,
                     minTime, minDistance, gpsListener);
 
             Toast.makeText(getApplicationContext(), "내 위치확인 요청함",
@@ -147,15 +147,16 @@ public class MapActivity extends AppCompatActivity {
 
     private void showMyLocationMarker(LatLng curPoint) {
         if (myLocationMarker == null) {
-            myLocationMarker = new MarkerOptions();
+            myLocationMarker = new MarkerOptions();   //마커 객체 생성
             myLocationMarker.position(curPoint);
             myLocationMarker.title("● 내 위치\n");
             myLocationMarker.snippet("● GPS로 확인한 위치");
             myLocationMarker.icon(BitmapDescriptorFactory.fromResource(R.drawable.mylocation));
-            map.addMarker(myLocationMarker);
+            map.addMarker(myLocationMarker);     //지도에 마커 추가하기
         } else {
             myLocationMarker.position(curPoint);
         }
     }
+
 
 }
