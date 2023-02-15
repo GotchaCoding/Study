@@ -26,6 +26,8 @@ import org.techtown.androidwithjava.ch13_multimedia.YoutubeActivity;
 import org.techtown.androidwithjava.ch14_gps.LocationActivity;
 import org.techtown.androidwithjava.ch14_gps.MapActivity;
 import org.techtown.androidwithjava.ch14_gps.widget.WidgetActivity;
+import org.techtown.androidwithjava.ch15_PushSensorService.NotificationManagerActivity;
+import org.techtown.androidwithjava.ch15_PushSensorService.VibrateActivity;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -197,10 +199,28 @@ public class SecondActivity extends AppCompatActivity {
         });
 
         Button btn_widget = findViewById(R.id.btn_widget);
-        btn_map.setOnClickListener(new View.OnClickListener() {
+        btn_widget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SecondActivity.this, WidgetActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn_vibrate = findViewById(R.id.btn_vibrate);
+        btn_vibrate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SecondActivity.this, VibrateActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn_notification = findViewById(R.id.btn_notification);
+        btn_notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SecondActivity.this, NotificationManagerActivity.class);
                 startActivity(i);
             }
         });

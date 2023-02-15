@@ -39,6 +39,7 @@ public class CustomView extends View {
     protected void onDraw(Canvas canvas) {  //뷰가 화면에 그려질 때 자동으로 호출 됨
         super.onDraw(canvas);
         canvas.drawRect(100, 100, 200, 200, paint);
+        canvas.drawRect(200, 200, 300, 300,paint);
     }
 
     @Override
