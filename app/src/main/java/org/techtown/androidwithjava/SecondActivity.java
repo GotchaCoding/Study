@@ -26,7 +26,9 @@ import org.techtown.androidwithjava.ch13_multimedia.YoutubeActivity;
 import org.techtown.androidwithjava.ch14_gps.LocationActivity;
 import org.techtown.androidwithjava.ch14_gps.MapActivity;
 import org.techtown.androidwithjava.ch14_gps.widget.WidgetActivity;
+import org.techtown.androidwithjava.ch15_PushSensorService.ManagerActivity;
 import org.techtown.androidwithjava.ch15_PushSensorService.NotificationManagerActivity;
+import org.techtown.androidwithjava.ch15_PushSensorService.SensorActivity;
 import org.techtown.androidwithjava.ch15_PushSensorService.VibrateActivity;
 
 public class SecondActivity extends AppCompatActivity {
@@ -221,6 +223,24 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SecondActivity.this, NotificationManagerActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn_sensor = findViewById(R.id.btn_sensor);
+        btn_sensor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SecondActivity.this, SensorActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn_manager = findViewById(R.id.btn_manager);
+        btn_manager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SecondActivity.this, ManagerActivity.class);
                 startActivity(i);
             }
         });
